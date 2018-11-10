@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Search Engine{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>{{ keyword }}</h1>
+</div>
+<table class = 'table'>
+<thead>
+<th>MusicName</th><th>哀</th><th>恶</th><th>好</th><th>惊</th><th>惧</th><th>乐</th><th>怒</th><!--   <th>em8</th><th>em9</th><th>em10</th>--> <th>similar</th>
+</thead>
+<tbody>
+{% for i in range(llen) %}
+<tr>
+    <td>{{ musicifo[i].musicname }}</td>
+    <td>{{ musicifo[i].em1 }}</td>
+    <td>{{ musicifo[i].em2 }}</td>
+    <td>{{ musicifo[i].em3 }}</td>
+    <td>{{ musicifo[i].em4 }}</td>
+    <td>{{ musicifo[i].em5 }}</td>
+    <td>{{ musicifo[i].em6 }}</td>
+    <td>{{ musicifo[i].em7 }}</td><!--
+    <td>{{ musicifo[i].em8 }}</td>
+    <td>{{ musicifo[i].em9 }}</td>
+    <td>{{ musicifo[i].em10 }}</td> -->
+    <td>{{ result[i].sim }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

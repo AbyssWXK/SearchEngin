@@ -1,0 +1,4 @@
+[ti:烟花易冷]
+[pair('[', 'x'), pair('ti', 'eng'), pair(':', 'x'), pair('烟花', 'n'), pair('易冷', 'nr'), pair(']', 'x')]
+
+[ti:烟花易冷]
