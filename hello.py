@@ -103,7 +103,7 @@ def createlist(keyword):
     return mlist
 def analysis(keyword):
     # emotion analysis
-    # ma = Music('keyword', 1, 1, 1, 1, 1, 1, 1, 0, 0, 0)
+    #ma = Music('keyword', 1, 1, 1, 1, 1, 1, 1, 0, 0, 0)
     d= DictClassifier()
     m = d.analyse_sentence(keyword)
     ma = Music('keyword',m['scoreai'],m['scoree'],m['scorehao'],m['scorejing'],m['scoreju'],m['scorele'],m['scorenu'],0,0,0)

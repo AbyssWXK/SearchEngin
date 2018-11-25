@@ -4,7 +4,10 @@ from collections import defaultdict
 import jieba
 import numpy as np
 from jieba import posseg
-
+import io
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 # ################################################
 # classifier based on sentiment f_dict
@@ -472,7 +475,7 @@ class DictClassifier:
     def __get_dict(path, encoding="utf-8"):
         sentiment_dict = {}
         pattern = re.compile(r"\s+")
-        with open(path, encoding=encoding) as f:
+        with io.open(path, encoding=encoding) as f:
             for line in f:
                 result = pattern.split(line.strip())
                 if len(result) == 2:
